@@ -37,6 +37,14 @@ begin
 	end
 end
 
+# ╔═╡ 26d7aa6f-7470-4941-a641-b29db945eab1
+begin
+	display(df[ismissing.(df.Crime_Rate), [:Crime_Rate, :Habitability_score]])
+	
+	display(mean(skipmissing(df[ismissing.(df.Crime_Rate), :Habitability_score])))
+	display(mean(skipmissing(df.Habitability_score)))
+end
+
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
 [deps]
@@ -406,5 +414,6 @@ version = "17.4.0+0"
 # ╠═1cc87307-8b30-462b-857a-30be72502c3e
 # ╠═2ff49e8d-d553-417f-ab40-f4496739836b
 # ╠═e70f2a37-ce79-4593-93a5-d2a669db5c84
+# ╠═26d7aa6f-7470-4941-a641-b29db945eab1
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
